@@ -1,0 +1,17 @@
+- name: ForkBacon
+  uses: shitiomatic/forkbacon@v1.1.0
+  with:
+    # Upstream URL. This MUST be public!
+    upstream_url: 
+    # Upstream Branch to Merge/Rebase
+    https://github.com/unicfdlab/QGDsolver
+    upstream_branch: # default is master
+    exper/digitef-dev-1912
+    # Branch to Merge/Rebase
+    branch: # default is master
+    exper/digitef-dev-1912
+    # Method to use. Can be `merge`, `merge-ff-only` or `rebase`.
+    method: # default is rebase
+    merge
+    # Extra arguments
+    args: # optional, default is 
