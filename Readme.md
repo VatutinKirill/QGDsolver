@@ -1,0 +1,1 @@
+foamStyleChecked QGDsolver
