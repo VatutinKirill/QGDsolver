@@ -13,7 +13,7 @@ jobs:
         # Owner of the forked repository
         owner: "unicfdlab" # optional
         # Token for the github API
-        github_token: "hm"
+        github_token: "e0530f6b3ae3b64d595de1c88385b92eecc8cad9"
         # Branch to track
         head: "exper/digitef-dev-1912" # optional, default is master
         # Branch to keep updated
