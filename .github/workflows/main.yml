@@ -5,16 +5,20 @@ on: [push]
 jobs:
   build:
     # Job name is Greeting
-    name: Greeting
-    # This job runs on Linux
-    runs-on: ubuntu-latest
-    steps:
-      # This step uses GitHub's javascript-action
-      - name: forkbacon
-        uses: shitiomatic/forkbacon@v1.1.0
-        with:
-          upstream_url: "https://github.com/unicfdlab/QGDsolver.git" # Required! Upstream https clone URL
-          upstream_branch: "exper/digitef-dev-1912"   # Upstream Branch to use
-          branch: " exper/digitef-dev-1912"   # Local Branch
-          method: "merge"   # Method to use. Can be `merge`, `merge-ff-only` or `rebase`.
-          args: "--no-push"  # Additional Arguments to pass to the container
+- name: Fork Sync
+  uses: TG908/fork-sync@v1.1.7
+  with:
+    # Owner of the forked repository
+    owner: "unicfdlab" # optional
+    # Token for the github API
+    github_token: 
+    # Branch to track
+    head: "exper/digitef-dev-1912" # optional, default is master
+    # Branch to keep updated
+    base: "exper/digitef-dev-1912" # optional, default is master
+    # Merge method to use
+    merge_method: # optional, default is merge
+    # The title of the pull request
+    pr_title: # optional, default is Fork Sync
+    # The message in the pull request
+    pr_message: "action to update fork" # optional
