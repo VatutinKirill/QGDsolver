@@ -1,5 +1,9 @@
-- name: forkbacon
-  uses: shitiomatic/forkbacon@v1.1.0
+jobs:
+  forkbacon:
+    runs-on: ubuntu-latest
+    steps:
+    - name: forkbacon
+    - uses: shitiomatic/forkbacon@v1.1.0
       with:
         upstream_url: "https://github.com/unicfdlab/QGDsolver" # Required! Upstream https clone URL
         upstream_branch: "exper/digitef-dev-1912"   # Upstream Branch to use
