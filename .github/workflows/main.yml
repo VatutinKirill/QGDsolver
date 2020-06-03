@@ -5,22 +5,22 @@ on: [push]
 jobs:
   build:
     # Job name is Greeting
-  runs-on: ubuntu-latest	  with:
-  steps:
-- name: Fork Sync
-  uses: TG908/fork-sync@v1.1.7
-  with:
-    # Owner of the forked repository
-    owner: "unicfdlab" # optional
-    # Token for the github API
-    github_token: 
-    # Branch to track
-    head: "exper/digitef-dev-1912" # optional, default is master
-    # Branch to keep updated
-    base: "exper/digitef-dev-1912" # optional, default is master
-    # Merge method to use
-    merge_method: # optional, default is merge
-    # The title of the pull request
-    pr_title: # optional, default is Fork Sync
-    # The message in the pull request
-    pr_message: "action to update fork" # optional
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fork Sync
+      uses: TG908/fork-sync@v1.1.7
+      with:
+        # Owner of the forked repository
+        owner: "unicfdlab" # optional
+        # Token for the github API
+        github_token: ""
+        # Branch to track
+        head: "exper/digitef-dev-1912" # optional, default is master
+        # Branch to keep updated
+        base: "exper/digitef-dev-1912" # optional, default is master
+        # Merge method to use
+        merge_method: "merge" # optional, default is merge
+        # The title of the pull request
+        pr_title: "" # optional, default is Fork Sync
+        # The message in the pull request
+        pr_message: "action to update fork" # optional
