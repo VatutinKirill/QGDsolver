@@ -5,6 +5,8 @@ on: [push]
 jobs:
   build:
     # Job name is Greeting
+  runs-on: ubuntu-latest	  with:
+  steps:
 - name: Fork Sync
   uses: TG908/fork-sync@v1.1.7
   with:
