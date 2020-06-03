@@ -11,7 +11,7 @@ jobs:
       uses: TG908/fork-sync@v1.1.7
       with:
         # Owner of the forked repository
-        owner: "" # optional
+        owner: "unicfdlab" # optional
         # Token for the github API
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # Branch to track
