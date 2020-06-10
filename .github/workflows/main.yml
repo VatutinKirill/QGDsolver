@@ -27,4 +27,5 @@ jobs:
         # The title of the pull request
         #pr_title: "" # optional, default is Fork Sync
         # The message in the pull request
-        pr_message: "action to update fork" # optional
+        pr_message: "action to update fork 2" # optional
+
