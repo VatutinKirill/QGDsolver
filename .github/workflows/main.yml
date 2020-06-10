@@ -1,26 +1,30 @@
 name: Update forks
 # This workflow is triggered on pushes to the repository.
 on: [push]
+#  schedule:
+#    - cron: '*/30 * * * *'
 
 jobs:
-  build:
+  sync:
+    
     # Job name is Greeting
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Fork Sync
-      uses: TG908/fork-sync@v1.1.7
-      with:
+     - name: Fork Sync
+       uses: TG908/fork-sync@v1.1.7
+       with:
         # Owner of the forked repository
-        owner: "unicfdlab" # optional
+        owner: unicfdlab # optional
         # Token for the github API
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # Branch to track
-        head: "exper/digitef-dev-1912" # optional, default is master
+        head: exper/digitef-dev-1912 # optional, default is master
         # Branch to keep updated
-        base: "exper/digitef-dev-1912" # optional, default is master
+        base: exper/digitef-dev-1912 # optional, default is master
         # Merge method to use
-        merge_method: "merge" # optional, default is merge
+        #merge_method: "merge" # optional, default is merge
         # The title of the pull request
-        pr_title: "" # optional, default is Fork Sync
+        #pr_title: "" # optional, default is Fork Sync
         # The message in the pull request
         pr_message: "action to update fork" # optional
