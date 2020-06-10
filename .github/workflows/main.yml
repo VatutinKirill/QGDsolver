@@ -1,15 +1,13 @@
-name: Update forks
+name: Update local forks from unicfd
 # This workflow is triggered on pushes to the repository.
-on: [push]
-#  schedule:
-#    - cron: '*/30 * * * *'
-
+on:
+#[push]
+  schedule:
+    - cron: '30 5 * * 2'
 jobs:
   sync:
-    
     # Job name is Greeting
     runs-on: ubuntu-latest
-    
     steps:
      - name: Fork Sync
        uses: TG908/fork-sync@v1.1.7
@@ -27,5 +25,4 @@ jobs:
         # The title of the pull request
         #pr_title: "" # optional, default is Fork Sync
         # The message in the pull request
-        pr_message: "action to update fork 2" # optional
-
+        pr_message: "action to update fork" # optional
