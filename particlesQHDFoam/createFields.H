@@ -132,7 +132,11 @@ turbulence.reset
 
 label pRefCell = 0;
 scalar pRefValue = 0.0;
-setRefCell(p, mesh.solutionDict().subDict("PISO"), pRefCell, pRefValue);
+setRefCell(p, thermo.subDict("QGD"), pRefCell, pRefValue);
+
+SLGThermo slgThermo(mesh, thermo);
+
+#include "createClouds.H"
 
 //
 //END-OF-FILE
